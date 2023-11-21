@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// https://github.com/convex-eth/platform/blob/main/contracts/contracts/interfaces/IBooster.sol
+
 interface IBooster {
     struct PoolInfo {
         address lptoken;
@@ -10,7 +12,6 @@ interface IBooster {
         address stash;
         bool shutdown;
     }
-
 
     function deposit(uint256 _pid, uint256 _amount, bool _stake) external returns (bool);
     function depositAll(uint256 _pid, bool _stake) external returns (bool);
